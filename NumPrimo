@@ -1,0 +1,28 @@
+def num_primo(num):
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+def verificar_primo(numero):
+    if 1 <= numero <= 100:
+        return num_primo(numero)
+    else:
+        return False
+for i in range(1, 101):
+    if verificar_primo(i):
+        print(f'{i} é um número primo')
+    else:
+        print(f'{i} não é um número primo.')
+numero_usuario = int(input('Agora, digite um número para verificar se é primo: '))
+if verificar_primo(numero_usuario):
+    print(f'{numero_usuario} é um número primo.')
+else:
+    print(f'{numero_usuario} não é um número primo.')
