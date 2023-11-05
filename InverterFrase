@@ -1,0 +1,15 @@
+#InverterUmaFrase
+def inverter_letras_palavras(frase):
+    palavras = frase.split()  
+    palavras_invertidas = []
+
+    for palavra in palavras:
+        palavra_invertida = ''.join(reversed(palavra))
+        palavras_invertidas.append(palavra_invertida)
+
+    frase_invertida = ' '.join(palavras_invertidas)  # Juntar as palavras invertidas em uma frase
+    return frase_invertida
+
+frase_usuario = input('Digite uma frase para ser invertida: ')
+frase_invertida = inverter_letras_palavras(frase_usuario)
+print('Frase invertida:', frase_invertida)
