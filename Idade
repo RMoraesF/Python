@@ -1,4 +1,0 @@
-idade=int(input('Quantos anos de vida você tem? '))
-meses=(idade*360)/30
-dias=idade*360
-print('Você tem',idade,'anos, o que equivale a',meses,'meses de idade, ou, ainda,',dias,'dias de idade!')
